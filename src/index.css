@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    text-rendering: optimizeSpeed;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: gray;
+    /* background-color: rgb(152, 149, 149); */
+    border-radius: 100rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    /* background-color: white; */
+    border-radius: 100rem;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-icon {
+        @apply w-9 h-9 rounded-full flex items-center justify-center;
+    }
+}
+
+.gallery-enter {
+    opacity: 0;
+    transform: translateX(100px);
+}
+.gallery-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+}
+.gallery-exit {
+    opacity: 1;
+}
+.gallery-exit-active {
+    opacity: 0;
+    transform: translateX(200px);
+
+    transition: opacity 300ms, transform 300ms;
+}
+
+.modal-enter {
+    opacity: 0;
+    transform: scale(0.9);
+}
+.modal-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+}
+.modal-exit {
+    opacity: 1;
+}
+.modal-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+}
+
+/* .search-enter {
+    opacity: 0;
+    transform: translateY(-30px);
+}
+.search-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+}
+.search-exit {
+    opacity: 1;
+}
+.search-exit-active {
+    opacity: 0;
+    transform: translateY(-30px);
+
+    transition: opacity 300ms, transform 300ms;
+} */
